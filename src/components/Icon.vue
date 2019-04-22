@@ -1,6 +1,6 @@
 <template>
   <span class="dh-icon">
-    <svg :class="['icon icon-' + shape, modifier ? modifier : '']"><use :href="'/symbol-defs.svg#icon-' + shape"></use></svg>
+    <svg :class="['icon icon-' + shape, modifier ? modifier : '']"><use :href="'/icomoon/symbol-defs.svg#icon-' + shape"></use></svg>
   </span>
 </template>
 
