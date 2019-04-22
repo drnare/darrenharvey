@@ -1,0 +1,69 @@
+/*
+  breakpoint-set($breakpoint)
+
+  Default breakpoints. Can be overridden in your own scss.
+
+  Outputs @media(min-width: [size]px) { @content }
+
+  Alias: bp-s($breakpoint)
+
+  Markup:
+  .className {
+    ...
+    @include breakpoint-set({{modifier_class}}) {
+      ...
+    }
+  }
+
+  's' - Small
+  'm' - Medium
+  'l' - Large
+  'xl' - Extra Large
+
+*/
+@mixin breakpoint-set($size-from,$size-to: "") {
+  @if (str_length($size-from) > 0 and map-has-key($breakpoints, $size-from) and str_length($size-to) == 0) {
+    @media screen and (min-width: #{map-get($breakpoints, $size-from)}) {
+      @content;
+    }
+  }
+  @else if (str_length($size-to) > 0 and map-has-key($breakpoints, $size-to)) {
+    @media screen and (min-width: #{map-get($breakpoints, $size-from)}) and (max-width: #{map-get($breakpoints, $size-to)-1}) {
+      @content;
+    }
+  }
+  @else {
+    @error("No such key: `#{$size-from}` in $breakpoints.");
+  }
+}
+@mixin bp-s($args...) {
+  @include breakpoint-set($args...){
+    @content;
+  }
+}
+
+/*
+  breakpoint-get($breakpoint)
+
+  Get breakpoint size. Same values as breakpoint-set().
+
+  Alias: bp-g($breakpoint)
+
+  Markup:
+  .className {
+    max-width: breakpoint-get('l') {
+      ...
+    }
+  }
+*/
+@function breakpoint-get($size) {
+  @if(str_length($size) > 0 and map-has-key($breakpoints, $size)) {
+    @return #{map-get($breakpoints, $size)};
+  }
+  @else {
+    @error("No such key: `#{$size}` in $breakpoints.");
+  }
+}
+@function bp-g($args...) {
+  @return breakpoint-get($args...)
+}

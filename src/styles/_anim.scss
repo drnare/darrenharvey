@@ -1,0 +1,14 @@
+.dh-anim {
+  &__rotate {
+    animation: rotate 1s ease-in-out infinite;
+    transform-origin: center;
+    @keyframes rotate {
+      from {
+        transform: rotate(0);
+      }
+      to {
+        transform: rotate(360deg);
+      }
+    }
+  }
+}

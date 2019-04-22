@@ -1,0 +1,47 @@
+$font-size-base: 16;
+$geo-base: 10;
+
+@function rem-calc($size) {
+  $size: ($size / $font-size-base);
+  @return #{$size}rem;
+}
+
+$fonts: (
+  'title': 'Istok Web',
+  'body': 'Fira sans',
+) !default;
+
+$font-sizes: (
+  's': rem-calc($font-size-base - 4),
+  'm': rem-calc($font-size-base),
+  'l': rem-calc($font-size-base + 5),
+  'xl': rem-calc($font-size-base + 10),
+  'xxl': rem-calc($font-size-base + 20),
+) !default;
+
+$geo: (
+  'xs': rem-calc($geo-base / 4),
+  's': rem-calc($geo-base / 2),
+  'm': rem-calc($geo-base),
+  'l': rem-calc($geo-base * 2),
+  'xl': rem-calc($geo-base * 4),
+) !default;
+
+$colors: (
+  'white': hsl(0, 0, 100),
+  'black': rgb(89, 89, 89),
+  'primary': hsl(199, 78%, 45%),
+  'accent': hsl(73, 73%, 50%),
+) !default;
+
+$breakpoints: (
+  'xs': 0px,
+  's': 577px,
+  'm': 769px,
+  'l': 993px,
+  'xl': 1201px,
+  'xxl': 1441px
+) !default;
+
+@import '_anim';
+@import '_breakpoints';
