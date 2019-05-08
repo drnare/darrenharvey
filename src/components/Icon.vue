@@ -33,6 +33,7 @@ export default {
       width: 1.5rem;
       height: 1.5rem;
       fill: map-get($colors, 'black');
+      vertical-align: bottom;
     }
   }
 </style>

@@ -36,10 +36,9 @@ export default {
 <style lang="scss">
 @import "../styles/_variables";
 .dh-card {
-  $el: &;
   display: flex;
   flex-direction: column;
-  padding: map-get($geo, 'm');
+  padding: map-get($geo, 'l');
   margin-bottom: map-get($geo, 'm');
   background: transparentize(map-get($colors, 'white'), 0.1);
   border-radius: map-get($geo, 'm');
@@ -50,6 +49,7 @@ export default {
   &__link {
     text-decoration: none;
     color: inherit;
+    border: 0;
     .dh-card {
       &:hover {
         transform: scale(1.05);

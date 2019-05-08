@@ -2,11 +2,11 @@
   <Page class="photography" title="Photography">
     <Icon v-if="loading" modifier="dh-anim__rotate" shape="refresh-cw"></Icon>
     <span v-if="error">
-      Failed fetching photos. Visit <a href="https://www.flickr.com/photos/mdrx">Flickr</a>
+      Failed fetching photos. Visit <a title="Flickr" href="https://www.flickr.com/photos/mdrx">Flickr</a>
     </span>
     <ul class="dh-photos" v-else>
       <li class="dh-photos__photo" v-for="photo in photos" :key="photo.link">
-        <a class="dh-photos__photo-image" :href="photo.link" :style="{ backgroundImage: `url(${photo.media.m})` }"></a>
+        <a class="dh-photos__photo-image" :title="photo.title" :href="photo.link" :style="{ backgroundImage: `url(${photo.media.m})` }"></a>
       </li>
     </ul>
   </Page>
@@ -43,10 +43,8 @@ export default {
           this.loading = false;
           this.error = true;
         } else {
-          setTimeout(() => {
-            this.photos = data.items;
-            this.loading = false;
-          }, 1000);
+          this.photos = data.items;
+          this.loading = false;
         }
       }
     );
@@ -77,6 +75,7 @@ export default {
       height: 100%;
       background: transparent none no-repeat center center;
       background-size: cover;
+      border: 0;
       border-radius: map-get($geo, 'm');
       transition: all .1s ease-in-out;
       &:hover {

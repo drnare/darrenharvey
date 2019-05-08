@@ -47,6 +47,29 @@ h4 {
   font-family: map-get($fonts, "title");
 }
 
+a {
+  display: inline-block;
+  border-bottom: 1px solid map-get($colors, "black");
+  color: inherit;
+  text-decoration: none;
+}
+
+p {
+  &:first-of-type {
+    margin-top: 0;
+  }
+  &:last-of-type {
+    margin-bottom: 0;
+  }
+}
+
+
+.router-link-active {
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+
 #app {
   display: flex;
   align-items: center;

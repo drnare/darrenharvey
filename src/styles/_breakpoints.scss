@@ -1,26 +1,3 @@
-/*
-  breakpoint-set($breakpoint)
-
-  Default breakpoints. Can be overridden in your own scss.
-
-  Outputs @media(min-width: [size]px) { @content }
-
-  Alias: bp-s($breakpoint)
-
-  Markup:
-  .className {
-    ...
-    @include breakpoint-set({{modifier_class}}) {
-      ...
-    }
-  }
-
-  's' - Small
-  'm' - Medium
-  'l' - Large
-  'xl' - Extra Large
-
-*/
 @mixin breakpoint-set($size-from,$size-to: "") {
   @if (str_length($size-from) > 0 and map-has-key($breakpoints, $size-from) and str_length($size-to) == 0) {
     @media screen and (min-width: #{map-get($breakpoints, $size-from)}) {
@@ -42,20 +19,6 @@
   }
 }
 
-/*
-  breakpoint-get($breakpoint)
-
-  Get breakpoint size. Same values as breakpoint-set().
-
-  Alias: bp-g($breakpoint)
-
-  Markup:
-  .className {
-    max-width: breakpoint-get('l') {
-      ...
-    }
-  }
-*/
 @function breakpoint-get($size) {
   @if(str_length($size) > 0 and map-has-key($breakpoints, $size)) {
     @return #{map-get($breakpoints, $size)};
