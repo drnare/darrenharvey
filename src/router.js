@@ -29,6 +29,22 @@ const router = new Router({
         title: 'Contact',
       },
     },
+    {
+      path: '/work/:companyId?',
+      name: 'work',
+      component: () => import(/* webpackChunkName: "work" */ './views/Work.vue'),
+      meta: {
+        title: 'Work',
+      },
+    },
+    {
+      path: '/*',
+      name: 'notFound',
+      component: () => import(/* webpackChunkName: "notFound" */ './views/Not-Found.vue'),
+      meta: {
+        title: 'Not Found',
+      },
+    },
   ],
 });
 
