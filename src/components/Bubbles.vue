@@ -17,11 +17,11 @@ export default {
 }
 @function getPosition($index) {
   $positions: (
-    1: -10 -20,
+    1: -10 0,
     2: 0 40,
-    3: 66 75,
+    3: 50 75,
     4: 50 50,
-    5: 70 -20,
+    5: 60 -20,
     6: 50 -20,
     7: 33 33,
     8: 0 50,
@@ -42,7 +42,7 @@ export default {
   @return map-get($sizes, $index);
 }
 @function getOpacity() {
-  @return (random(4) + 1) / 10;
+  @return (random(2) + 1) / 10;
 }
 @function getGradient($index) {
   $gradients: (
