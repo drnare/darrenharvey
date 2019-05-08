@@ -1,0 +1,61 @@
+{
+  "home": {
+    "pages": [
+      {
+        "id": "work",
+        "name": "Work",
+        "content": "Work I have done",
+        "icon": "git-merge"
+      },
+      {
+        "id": "photography",
+        "name": "Photography",
+        "content": "Some snaps",
+        "icon": "aperture"
+      },
+      {
+        "id": "contact",
+        "name": "Contact",
+        "content": "Get in touch",
+        "icon": "mail"
+      }
+    ]
+  },
+  "contact": {
+    "content": [
+      "<p>If you are not here because youhave my CV and you would like to get in touch, you can find me on <a href=\"https://www.twitter.com/darrenharvey\">Twitter</a> and <a href=\"https://www.instagram.com/drnare\">Instagram</a> where I post frequently.</p>"
+    ]
+  },
+  "work": {
+    "pages": [
+      {
+        "id": "crowdicity",
+        "name": "Crowdicity",
+        "blurb": "Front-end developer",
+        "content": [
+          "<p>Crowdicity develops idea management software.</p>",
+          "<p>As front-end developer I was hired to help rebuild the platform from the ground up using modern techniques with React, Redux, Enzyme, and Sass. The goal was to develop well a well-tested, scalable and performant multi-lingual platform which respects global data-privacy laws.</p>",
+          "<p>I have also worked with Vue, Vuex, and PHP whilst maintaining and extending the legacy environment.</p>"
+        ]
+      },
+      {
+        "id": "see-tickets",
+        "name": "See Tickets",
+        "blurb": "Senior Web Developer",
+        "content": [
+          "<p>See Tickets sells tickets to concerts, festivals, exhibitions, and sporting events.</p>",
+          "<p>During my time at See Tickets I developed hundreds of white-label e-commerce sites; managed high traffic sales with tens of thousands of concurrent users; built multi-lingual bespoke solutions for ballots, registration systems, auctions and more.</p>",
+          "<p>I have produced sites for the BBC, Glastonbury Festivals, The Lawn Tennis Association, Banksy, Louis Vuitton.</p>"
+        ]
+      },
+      {
+        "id": "github",
+        "name": "Github",
+        "blurb": "This site is on Github",
+        "content": [
+          "<p><a href=\"https://github.com/drnare/darrenharvey\" title=\"View on Github\">View the source for this site</a> on Github.</p>"
+        ]
+      }
+    ]
+  }
+}
