@@ -2,7 +2,7 @@
   <div id="app">
     <div class="dh-content">
       <transition name="dh-transition__route" mode="out-in">
-        <router-view></router-view>
+        <router-view :key="$route.fullPath"></router-view>
       </transition>
     </div>
     <Bubbles :class="route.name"></Bubbles>
