@@ -1,14 +1,17 @@
 <template>
   <article class="dh-page">
+
+    <Breadcrumbs></Breadcrumbs>
+
     <header class="dh-page__header">
-      <router-link v-if="!subtitle" to="/">
-        <Icon shape="home"></Icon>
-      </router-link>
+
       <hgroup>
         <h2 class="dh-page__header-subtitle">{{subtitle}}</h2>
         <h1 class="dh-page__header-title">{{title}}</h1>
       </hgroup>
+
     </header>
+
     <div :class="['dh-page__body', isGrid ? 'dh-page__body--grid' : '']">
       <slot></slot>
     </div>
@@ -16,11 +19,11 @@
 </template>
 
 <script>
-import Icon from './Icon';
+import Breadcrumbs from './Breadcrumbs';
 export default {
   name: 'Page',
   components: {
-    Icon,
+    Breadcrumbs,
   },
   props: {
     title: String,
@@ -43,10 +46,15 @@ export default {
     &-title {
       margin: 0;
       font-size: map-get($font-sizes, 'xxl');
+      text-transform: capitalize;
     }
     &-subtitle {
       margin: 0;
       font-size: map-get($font-sizes, 'xl');
+    }
+    &-separator {
+      font-size: map-get($font-sizes, 'xxl');
+      line-height: map-get($font-sizes, 'l');
     }
   }
   &__body {
