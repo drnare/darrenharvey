@@ -4990,9 +4990,9 @@ lodash.clonedeep@^4.3.2:
   integrity sha1-4j8/nE+Pvd6HJSnBBxhXoIblzO8=
 
 lodash.defaultsdeep@^4.6.0:
-  version "4.6.0"
-  resolved "https://registry.yarnpkg.com/lodash.defaultsdeep/-/lodash.defaultsdeep-4.6.0.tgz#bec1024f85b1bd96cbea405b23c14ad6443a6f81"
-  integrity sha1-vsECT4WxvZbL6kBbI8FK1kQ6b4E=
+  version "4.6.1"
+  resolved "https://registry.yarnpkg.com/lodash.defaultsdeep/-/lodash.defaultsdeep-4.6.1.tgz#512e9bd721d272d94e3d3a63653fa17516741ca6"
+  integrity sha512-3j8wdDzYuWO3lM3Reg03MuQR957t287Rpcxp1njpEa8oDrikb+FwGdW3n+FELh/A6qib6yPit0j/pv9G/yeAqA==
 
 lodash.kebabcase@^4.1.1:
   version "4.1.1"
@@ -8261,11 +8261,6 @@ vue-hot-reload-api@^2.3.0:
   version "2.3.3"
   resolved "https://registry.yarnpkg.com/vue-hot-reload-api/-/vue-hot-reload-api-2.3.3.tgz#2756f46cb3258054c5f4723de8ae7e87302a1ccf"
   integrity sha512-KmvZVtmM26BQOMK1rwUZsrqxEGeKiYSZGA7SNWE6uExx8UX/cj9hq2MRV/wWC3Cq6AoeDGk57rL9YMFRel/q+g==
-
-vue-ionicons@^3.0.4:
-  version "3.0.4"
-  resolved "https://registry.yarnpkg.com/vue-ionicons/-/vue-ionicons-3.0.4.tgz#06dbb8334def235d9afe7ecb40bb1c01ba99b24d"
-  integrity sha512-tOS0dD7jAa4g8HsaL11JOgOPnog6Eh6IrxJWYVAE6oaXHf8tegidboNSKRxteu8sJ9cunj+az4skSlq0Pivgzg==
 
 vue-loader@^15.7.0:
   version "15.7.0"
